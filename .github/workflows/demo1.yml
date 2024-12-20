@@ -3,7 +3,16 @@ on:
   pull_request:
     types:
       - opened
+    branches:
+      - main # main
+      - 'dev-*' # dev-new, dev-this-is-a-feature
+      - 'feature/**' # feature/new feature/new/button
   workflow_dispatch:
+  push:
+    branches:
+      - main # main
+      - 'dev-*' # dev-new, dev-this-is-a-feature
+      - 'feature/**' # feature/new feature/new/button
 jobs:
   deploy: 
     runs-on: ubuntu-latest
